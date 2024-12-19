@@ -101,7 +101,7 @@ The data set used for this study is data from Mission Hospital patients in India
 
 ![Machine-Learning-Modeling](images/Picture3.png)
 
-*Figure 3: Methodology of Random Forest.*
+*Figure 3: Methodology of KNN.*
 
 </div>
 
