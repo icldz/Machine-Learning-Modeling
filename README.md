@@ -125,6 +125,46 @@ The data set used for this study is data from Mission Hospital patients in India
 
 </div>
 
+**MODEL SUITABILITY**
+
+Not all machine learning models are appropriate for predicting hospital charges. In this study, the following models are used for the following reasons.
+
+*RANDOM FOREST MODEL*
+
+1. Handling Nonlinear Relationships: Random forests can capture complex nonlinear patterns through their tree-based structure, where each node split can model different aspects of non-linear relationships. Unlike linear models, they don’t assume a straight line relationship between variables [2].
+
+2. Robustness to Outliers: The bootstrap sampling (bagging) process and the way trees are constructed make random forests naturally resistant to outliers. Each tree only sees a subset of the data, and the averaging of predictions helps minimize the impact of extreme values[16].
+
+3. High Prediction Accuracy: In healthcare cost prediction, Gradient Boosting consistently shows superior performance due to its ability to learn from residuals and capture subtle patterns in the data.[9]
+   
+4. Automatic Feature Selection: Random forests provide built-in feature importance measures through metrics like Mean Decrease Impurity (MDI) or Mean Decrease Accuracy (MDA), helping identify the most relevant predictors[18].
+   
+5. Automatic Feature Selection: The ensemble nature of random forests, combining multiple decision trees through bagging and random feature selection, typically leads to strong predictive performance, especially with complex data patterns[8].
+   
+6. Handling Multicollinearity: Random forests are less affected by correlations between predictors than linear models, as they can use different correlated features in other trees and maintain good prediction accuracy[6].
+   
+*GRADIENT BOOSTING*
+
+1. Handling Complex Relationships: Gradient Boosting proficients at modelling nonlinear relationships between healthcare costs and various factors (age, comorbidities, treatments, etc.) through its iterative tree-building process. Each tree can capture different aspects of these complex interactions[3].
+
+2. Speed and Performance: TXGBoost achieves faster training speeds through Parallel processing capabilities, Cache optimization, and Out-of-core computing for large datasets, "Weighted quantile sketch" for efficient feature value proposals[21].
+   
+3. High Prediction Accuracy: In healthcare cost prediction, Gradient Boosting consistently shows superior performance due to its ability to learn from residuals and capture subtle patterns in the data[13]
+
+4. Ability to Handle Mixed Data Types: Healthcare data includes various types (numerical lab values, categorical diagnoses, ordinal severity scores). Gradient Boosting can naturally handle this mix through its tree-based architecture[5].
+
+5. Missing Data Tolerance: TModern Gradient Boosting implementations have built-in strategies for handling missing values, which is crucial in healthcare data where complete records are rare [20].
+   
+*eXTREME GRADIENT BOOSTING*
+
+1. System Optimization Features: XGBoost implements various memory optimization techniques like "block structure" to handle data storage. These features help manage large-scale healthcare datasets efficiently.
+   
+2. Speed and Performance: XGBoost achieves faster training speeds through Parallel processing capabilities, Cache optimization, and Out-of-core computing for large datasets, "Weighted quantile sketch" for efficient feature value proposals[15].
+   
+3. Regularization Capabilities: XGBoost provides comprehensive regularization options: L1 regularization to handle sparsity, L2 regularization to prevent overfitting, Tree pruning based on the loss function, Shrinkage and column subsampling[10].
+   
+4. Handling Imbalanced Data: XGBoost offers built-in support for imbalanced datasets through the scale_pos_weight parameter, Custom evaluation metrics, Sample weights, and built-in support for various evaluation metrics suitable for imbalanced data[1]
+
 
 
 
