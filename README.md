@@ -181,4 +181,10 @@ When considering personal data, there are more male patients than female patient
 
 Age is an important factor when predicting the cost,
 
+<div align="center">
 
+![Machine-Learning-Modeling](images/Picture6.png)
+
+*Figure 6: Age groups vs Total cost.*
+
+</div>
