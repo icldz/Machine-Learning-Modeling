@@ -121,7 +121,7 @@ The data set used for this study is data from Mission Hospital patients in India
 
 ![Machine-Learning-Modeling](images/Picture5.png)
 
-*Figure 5: Methodology of Gradient Boosting.*
+*Figure 5: Methodology of eXtreme Gradient Boosting.*
 
 </div>
 
