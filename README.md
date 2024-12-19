@@ -83,7 +83,17 @@ The data set used for this study is data from Mission Hospital patients in India
 
 </div>
 
+**MODEL EXPERIMENTS**
 
+*RANDOM FOREST*
+
+<div align="center">
+
+![Machine-Learning-Modeling](images/Picture2.png)
+
+*Figure 1: Methodology of Random Forest.*
+
+</div>
 
 
 
