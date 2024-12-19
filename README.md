@@ -188,3 +188,112 @@ Age is an important factor when predicting the cost,
 *Figure 6: Age groups vs Total cost.*
 
 </div>
+
+The hospital charges are increased as the age group increases.
+
+Correlation is an important factor in the context of regression. Hence, the correlation between the dependent and dependent variables should be higher.
+
+ | Variable  | Correlation|
+|-------|--------------------------|
+| LENGTH OF STAY - ICU	| 0.821995|
+| TOTAL LENGTH OF STAY| 0.698709|
+| COST OF IMPLANT | 	0.483825|
+|AGE| 	0.420697 |
+| CREATININE| 0.377611  |
+| BODY WEIGHT	| 0.348270  |
+| UREA| 0.276581  |
+| BP -HIGH| 0.182876  |
+| LENGTH OF STAY- WARD    	| 	0.160676 |
+| BP-LOW |  	0.158195  |
+|RR |  	0.016181
+|HR PULSE|	-0.008536|
+|HB|	-0.061601|
+
+Table 3: Correlation.
+
+The ‘Length of stay-ICU’ had the highest positive correlation with the dependent variable, total cost.
+
+Model Accuracy Measures (Before applying regularization),
+
+| Model  | Mean Square Error| R<sup>2</sup>|
+|--------|-------------------------|-----------|
+|Random Forest| 6241324709| 67%|
+|Gradient Boosting| 6794572917| 64%|
+|eXtreme Gradient Boosting| 4705050794| 75%|
+|KNN Regressor| 12605164050| 34%|
+
+Table 4: Model Accuracy Measures.
+
+Model Accuracy Measures (After applying regularization),
+
+|Model| Mean Square Error| R<sup>2</sup>|
+|------|------------------|--------------|
+|Random Forest| 5217074388 |72%|
+|Gradient Boosting |6372878327| 66%|
+
+Table 5: Model Accuracy Measures.
+
+Model Accuracy Measures for KNN Regressor after adjusting the optimal value for K,
+
+|Model| Mean Square Error| R<sup>2</sup>|
+|--------|----------|---------|
+|KNN Regressor| 9756760463| 49%|
+
+Table 6: Model Accuracy Measures.
+
+**DISCUSSION**
+
+This study evaluated four machine learning models for healthcare cost prediction: XGBoost, Random Forest, Gradient Boosting, and KNN Regressor. The XGBoost model demonstrated superior performance with the lowest MSE (4,705,050,794) and highest accuracy (75%), followed closely by Random Forest (MSE: 5,217,074,388, Accuracy: 72%). Gradient Boosting showed moderate performance (MSE: 6,372,878,327, Accuracy: 66%), while the KNN Regressor had
+the least favourable results (MSE: 9,756,760,463, Accuracy: 49%). The strong performance of tree-based models, particularly XGBoost, can be attributed to their ability to handle complex non-linear relationships, manage missing values effectively, and process mixed data types commonly found in healthcare datasets. The significant performance gap between tree-based models and KNN suggests that healthcare cost prediction requires sophisticated modelling
+approaches capable of capturing intricate patterns and relationships in the data. XGBoost’s superior results can be specifically attributed to its advanced system optimization features, robust regularization capabilities, and efficient handling of imbalanced data, making it the most suitable choice for healthcare cost prediction tasks.
+
+**FUTURE DIRECTIONS**
+
+Several promising directions could enhance the current healthcare cost prediction model. First, exploring deep learning architectures, particularly neural networks designed for tabular data like TabNet or Deep Neural Networks with embeddings, could potentially capture more complex patterns in healthcare costs. Integrating more sophisticated feature engineering techniques, such as automated feature selection and generation through techniques like
+automated feature engineering (AutoFE) or domain-specific feature creation, could improve model performance. Additionally, exploring ensemble methods that combine multiple models, including the current top-performing XGBoost model, could potentially improve prediction accuracy further. Future work should also focus on developing more robust evaluation metrics specific to healthcare cost prediction, considering both accuracy and interpretability. Finally, investigating the impact of social determinants of health and incorporating external data sources like demographic and socioeconomic factors could provide a more comprehensive approach to cost prediction.
+
+**REFERENCES**
+
+[1] Rayene Bounab, Bouchra Guelib, and Karim Zarour. A novel machine learning approach for handling imbalanced data: Leveraging smote-enn and xgboost. In 2024 6th International Conference on Pattern Analysis and Intelligent Systems (PAIS), pages 1–7. IEEE,2024.
+
+[2] Leo Breiman. Random forests. Machine learning, 45:5–32, 2001.
+
+[3] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings 12of the 22nd acm sigkdd international conference on knowledge discovery and data mining,
+pages 785–794, 2016.
+
+[4] Robin A Cohen and Michael E Martinez. Health insurance coverage: Early release of estimates from the national health interview survey, january–june 2023. 2023.
+
+[5] William H Crown. Potential application of machine learning in health outcomes research and some statistical cautions. Value in health, 18(2):137–140, 2015.
+
+[6] Carsten F Dormann, Jane Elith, Sven Bacher, Carsten Buchmann, Gudrun Carl, Gabriel Carré, Jaime R García Marquéz, Bernd Gruber, Bruno Lafourcade, Pedro J Leitão, et al. Collinearity: a review of methods to deal with it and a simulation study evaluating their performance. Ecography, 36(1):27–46, 2013.
+
+[7] Nuha A ElSayed, Grazia Aleppo, Vanita R Aroda, Raveendhara R Bannuru, Florence M Brown, Dennis Bruemmer, Billy S Collins, Jason L Gaglia, Marisa E Hilliard, Diana Isaacs, et al. 2. classification and diagnosis of diabetes: standards of care in diabetes—2023. Diabetes care, 46(Supplement_1):S19–S40, 2023.
+
+[8] Manuel Fernández-Delgado, Eva Cernadas, Senén Barro, and Dinani Amorim. Do we need hundreds of classifiers to solve real world classification problems? The journal of machine learning research, 15(1):3133–3181, 2014.
+
+[9] Trevor Hastie. The elements of statistical learning: data mining, inference, and prediction, 2009.
+
+[10] Jialiang Jiang, Sharon Hewner, and Varun Chandola. Tree-based regularization for interpretable readmission prediction. In AAAI Spring Symposium: Combining Machine Learning with Knowledge Engineering, 2019.
+
+[11] Annika M Jödicke, Urs Zellweger, Ivan T Tomka, Thomas Neuer, Ivanka Curkovic, Malgorzata Roos, Gerd A Kullak-Ublick, Hayk Sargsyan, and Marco Egbring. Prediction of health care expenditure increase: how does pharmacotherapy contribute? BMC health services research, 19:1–11, 2019.
+
+[12] Òscar Jordà, Sanjay R Singh, and Alan M Taylor. Longer-run economic consequences of pandemics. Review of Economics and Statistics, 104(1):166–175, 2022.
+
+[13] Aravind Kumar Kalusivalingam, Amit Sharma, Neha Patel, and Vikram Singh. Enhancing hospital readmission rate predictions using random forest and gradient boosting algorithms. International Journal of AI and ML, 1(2), 2012.
+
+[14] Suraj Kulkarni, Suhas Suresh Ambekar, and Manoj Hudnurkar. Predicting the inpatient hospital cost using a machine learning approach. International Journal of Innovation Science, 13(1):87–104, 2021.
+
+[15] Rory Mitchell and Eibe Frank. Accelerating the xgboost algorithm using gpu computing. PeerJ Computer Science, 3:e127, 2017.13
+
+[16] Mohammad Amin Morid, Kensaku Kawamoto, Travis Ault, Josette Dorius, and Samir Abdelrahman. Supervised learning methods for predicting healthcare costs: systematic literature review and empirical evaluation. In AMIA annual symposium proceedings, volume 2017, page 1312, 2018.
+
+[17] Mark W Smith, Bernard Friedman, Zeynal Karaca, and Herbert S Wong. Predicting inpatient hospital payments in the united states: a retrospective analysis. BMC health services research, 15:1–12, 2015.
+
+[18] Carolin Strobl, Anne-Laure Boulesteix, Thomas Kneib, Thomas Augustin, and Achim Zeileis. Conditional variable importance for random forests. BMC bioinformatics, 9:1–11, 2008.
+
+[19] Roberto Vivancos, Charlotte Anderson, Paula Blomquist, Sooria Balasegaram, Anita Bell, Louise Bishop, Colin S Brown, Yimmy Chow, Obaghe Edeghere, Isaac Florence, et al. Community transmission of monkeypox in the united kingdom, april to may 2022. Eurosurveillance, 27(22):2200422, 2022.
+
+[20] Yuan Xie, Bin Jiang, Enhao Gong, Ying Li, Guangming Zhu, Patrik Michel, Max Wintermark, and Greg Zaharchuk. Use of gradient boosting machine learning to predict patient outcome in acute ischemic stroke on the basis of imaging, demographic, and clinical information. American Journal of Roentgenology, 212(1):44–51, 2019.
+
+[21] Cha Zhang and Yunqian Ma. Ensemble machine learning, volume 144. Springer, 2012.
+
