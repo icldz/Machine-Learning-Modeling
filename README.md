@@ -105,7 +105,15 @@ The data set used for this study is data from Mission Hospital patients in India
 
 </div>
 
+*GRADIENT BOOSTING*
 
+<div align="center">
+
+![Machine-Learning-Modeling](images/Picture4.png)
+
+*Figure 4: Methodology of KNN.*
+
+</div>
 
 
 
