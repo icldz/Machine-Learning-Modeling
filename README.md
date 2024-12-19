@@ -73,6 +73,15 @@ The data set used for this study is data from Mission Hospital patients in India
 
 <div align="center"><b>Table 1: Selected Variables.</b></div>
 
+<div align="center">
+
+![](images/hospital-charges.png)
+
+*Figure 1: Visualization of Hospital Charges by Category.*
+
+</div>
+
+
 
 
 
