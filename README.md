@@ -165,6 +165,16 @@ Not all machine learning models are appropriate for predicting hospital charges.
    
 4. Handling Imbalanced Data: XGBoost offers built-in support for imbalanced datasets through the scale_pos_weight parameter, Custom evaluation metrics, Sample weights, and built-in support for various evaluation metrics suitable for imbalanced data[1]
 
+ **IMPORTANT RESULTS**
 
+ | Features  | Categories(Percentages)|
+|-------|--------------------------|
+| Age| Male (67%), Female (33%)|
+| Marital Status| Age, Gender, Unmarried (56%), Married (44%)|
+| Type of Admission| Elective (87%), Emergency (13%)|
+| Mode of Arrival| Walked in (86%), Ambulance (12%), Transferred (2%) |
+| State at the Time of Arrival| Alert (~100%), Confused ( ~0%)  |
+
+Table 2: Categorical Features.
 
 
