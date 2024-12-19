@@ -177,4 +177,8 @@ Not all machine learning models are appropriate for predicting hospital charges.
 
 Table 2: Categorical Features.
 
+When considering personal data, there are more male patients than female patients, while most are unmarried. Also, when considering stay-at-hospital data, there is more usual admission than emergency admission, while fewer patients use ambulances than walking as their mode of arrival. However, almost all patients were alert when they arrived.
+
+Age is an important factor when predicting the cost,
+
 
